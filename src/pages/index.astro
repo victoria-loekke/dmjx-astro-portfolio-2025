@@ -3,7 +3,18 @@ import Layout from "../layouts/Layout.astro";
 import Case from "../components/Case.astro";
 ---
 
+<script>
+  import gsap from "gsap";
+  console.log("HEJ");
+  gsap.to(".dog", { rotation: 360, duration: 6 });
+</script>
+
 <Layout>
+  <div class="text-center p-4 grid grid-cols-2 gap-4">
+    <img src="/images/dogcrab.png" class="dog" alt="" />
+    <img src="/images/dogcrab.png" alt="" />
+  </div>
+
   <div class="grid grid-cols-2 gap-4">
     <Case
       img="https://picsum.photos/id/237/300/300"
@@ -16,4 +27,5 @@ import Case from "../components/Case.astro";
       text="mere noget nyt"
     />
   </div>
+  <div class="bg-primary h-22"></div>
 </Layout>
