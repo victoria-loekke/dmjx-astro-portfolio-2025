@@ -6,26 +6,19 @@ import Case from "../components/Case.astro";
 <script>
   import gsap from "gsap";
   console.log("HEJ");
-  gsap.to(".dog", { rotation: 360, duration: 6 });
+  //gsap.to(".overs", { scrollTrigger: '.overs', scaleX:10, duration:500});
 </script>
 
 <Layout>
-  <div class="text-center p-4 grid grid-cols-2 gap-4">
-    <img src="/images/dogcrab.png" class="dog blur-xs" alt="" />
-    <img src="/images/dogcrab.png" alt="" />
-  </div>
-
-  <div class="grid grid-cols-2 gap-4">
-    <Case
-      img="https://picsum.photos/id/237/300/300"
-      title="yolo"
-      text="skrt slay"
-    />
-    <Case
-      img="https://picsum.photos/id/456/200/300"
-      title="noget nyt"
-      text="mere noget nyt"
-    />
-  </div>
-  <div class="bg-primary h-22"></div>
+  <main class="p-4 pt-24 bg-stone-700 h-screen">
+    <div class="grid grid-cols-3 gap-10">
+      <Case img="/images/tern.png" title="SCHOOL" />
+      <Case img="/images/turn.png" title="CASES" />
+      <Case img="/images/patch.png" title="ABOUT" />
+    </div>
+    <div
+      class="text-[20rem]/[0.79] pt-12 font-heading bg-clip-text text-transparent bg-[url(/images/strik2.png)]">
+      PORTFOLIO
+    </div>
+  </main>
 </Layout>
