@@ -1,9 +1,15 @@
 ---
-const { img, title, text } = Astro.props;
+const { img, title } = Astro.props;
 ---
 
-<div class="bg-red-100 p-4">
-  <img src={img} alt="" />
-  <h1 class="text-red-700 text-3xl">{title}</h1>
-  <p>{text}</p>
+<div class="relative p-4">
+  <img
+    src={img}
+    class="w-full blur-md hover:blur-none transition-all duration-1000"
+    alt=""
+  />
+  <h1
+    class="text-5xl font-black absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+    {title}
+  </h1>
 </div>
