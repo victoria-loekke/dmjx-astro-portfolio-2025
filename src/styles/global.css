@@ -4,3 +4,15 @@
   --color-primary: #928e85;
   --font-heading: "Impact", "sans-serif";
 }
+
+@keyframes blurIn {
+  0% {
+    filter: blur(5px);
+  }
+  100% {
+    filter: blur(1px);
+  }
+}
+.blur-animation {
+  animation: blurIn 2s ease-out forwards;
+}
