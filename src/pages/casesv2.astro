@@ -1,0 +1,42 @@
+---
+import CaseOverskift from "../components/CaseOverskift.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<script>
+  const overskrifter = document.querySelectorAll(".overskrift");
+  const billedeElement = document.getElementById("billede");
+  const originalBillede = "/images/dogcrab.png";
+
+  billedeElement.src = originalBillede;
+
+  overskrifter.forEach(overskrift => {
+    overskrift.addEventListener("mouseover", function () {
+      const billedeSrc = overskrift.getAttribute("data-billede");
+      billedeElement.src = billedeSrc;
+    });
+
+    overskrift.addEventListener("mouseout", function () {
+      billedeElement.src = originalBillede;
+    });
+  });
+</script>
+
+<Layout>
+  <div class="grid grid-cols-2 gap-4 p-20">
+    <div>
+      <div
+        class="text-9xl font-heading bg-clip-text text-transparent bg-[url(/images/tern.png)]">
+        CASES
+      </div>
+      <CaseOverskift title="VIRKER DET?" img="images/chess.png" />
+      <CaseOverskift title="JA DET GØR" img="images/striber.png" />
+      <CaseOverskift title="HALLEJUJA" img="images/rød.png" />
+    </div>
+    <img
+      id="billede"
+      src="/images/dogcrab.png"
+      class="w-full h-[800px] object-cover transition-all duration-1000"
+    />
+  </div>
+</Layout>
