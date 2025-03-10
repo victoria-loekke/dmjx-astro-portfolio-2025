@@ -1,17 +1,15 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Case from "../components/Case.astro";
+import { getCollection } from "astro:content";
+const blogPosts = await getCollection("blog");
 ---
 
-<script>
-  import gsap from "gsap";
-  console.log("HEJ");
-  //gsap.to(".overs", { scrollTrigger: '.overs', scaleX:10, duration:500});
-</script>
-
 <Layout>
-  <div
-    class="text-[20rem]/[1] pt-4 blur-animation font-heading bg-clip-text text-transparent bg-[url(/images/vic.jpg)]">
-    VICTORIAS PORTFOLIO 2025
+  <div class="pt-6">
+ 
+    <div
+      class="text-[20rem]/[1] pt-4 blur-animation font-heading bg-clip-text text-transparent bg-[url(/images/vic.jpg)]">
+      VICTORIAS PORTFOLIO 2025
+    </div>
   </div>
 </Layout>

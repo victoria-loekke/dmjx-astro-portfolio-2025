@@ -3,7 +3,7 @@ const { title, text, img } = Astro.props;
 ---
 
 <div class="grid grid-cols-2 top-50 p-10 gap-6">
-  <div class="sticky top-50 h-screen">
+  <div class="sticky top-50 h-50">
     <h1 class="text-9xl font-heading">{title}</h1>
 
     <p>
@@ -11,7 +11,7 @@ const { title, text, img } = Astro.props;
     </p>
   </div>
 
-  <div class="gap-6">
+  <div class="grid gap-6">
     <img src={img} alt="" />
     <img src={img} alt="" />
     <img src={img} alt="" />

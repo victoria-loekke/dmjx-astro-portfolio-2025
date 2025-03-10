@@ -24,22 +24,17 @@ import Layout from "../layouts/Layout.astro";
 </script>
 
 <Layout>
-  <div class="grid grid-cols-2 gap-4 p-20">
-    <div>
-      <div
-        class="text-9xl font-heading bg-clip-text text-transparent bg-[url(/images/tern.png)]">
-        CASES
-      </div>
-      <a href="/projekt"
-        ><CaseOverskift title="MAGAZINE" img="images/magazine.png" /></a
-      >
-      <CaseOverskift title="JA DET GØR" img="images/striber.png" />
-      <CaseOverskift title="HALLEJUJA" img="images/rød.png" />
-    </div>
+  <div class="relative w-full h-screen overflow-hidden group">
     <img
       id="billede"
       src="/images/dogcrab.png"
-      class="w-full h-[800px] object-cover transition-all duration-1000"
+      class="w-full h-screen object-cover transition-all duration-1000"
     />
+
+    <div
+      class="text-center pt-30 absolute inset-0 flexitems-centerjustify-centertext-9xlfont-heading text-white">
+      <CaseOverskift title="JA DET GØR" img="images/striber.png" />
+      <CaseOverskift title="HALLEJUJA" img="images/rød.png" />
+    </div>
   </div>
 </Layout>
