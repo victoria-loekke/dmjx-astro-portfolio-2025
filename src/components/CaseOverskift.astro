@@ -1,14 +1,16 @@
 ---
-const { title, img } = Astro.props;
+const { title, img, beskrivelse } = Astro.props;
 ---
 
 <h1
   class="overskrift
-        text-5xl
-        font-bold
-       
+        text-6xl
+        leading-20
+        font-extrabold
         cursor-pointer
-        hover:text-onHover"
-  data-billede={img}>
+        hover:text-onHover
+        hover:blur-xs"
+  data-billede={img}
+  data-info={beskrivelse}>
   {title}
 </h1>

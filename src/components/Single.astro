@@ -1,11 +1,10 @@
 ---
-const { title, text, img,img2,img3,img4,img5 } = Astro.props;
+const { title, text, img, img2, img3, img4, img5 } = Astro.props;
 ---
 
-<div class="grid grid-cols-2 top-50 p-16 gap-6">
-  <div class="sticky top-70 h-50">
-
-    <h1 class="text-9xl uppercase font-heading">{title}</h1>
+<div class="grid grid-cols-2 p-16 gap-6">
+  <div class="sticky top-50 h-50">
+    <h1 class="text-[12rem] uppercase blur-xs font-extrabold">{title}</h1>
 
     <p class="pt-12 text-xl/loose">
       {text}
@@ -14,10 +13,10 @@ const { title, text, img,img2,img3,img4,img5 } = Astro.props;
   </div>
 
   <div class="grid pt-24 gap-6">
-    <img src={img} alt="" />
-    <img src={img2} alt="" />
-    <img src={img3} alt="" />
-    <img src={img4} alt="" />
-    <img src={img5} alt="" />
+    <img src={img} />
+    <img src={img2} />
+    <img src={img3} />
+    <img src={img4} />
+    <img src={img5} />
   </div>
 </div>
