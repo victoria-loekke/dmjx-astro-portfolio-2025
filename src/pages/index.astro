@@ -1,22 +1,21 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Case from "../components/Case.astro";
 import { getCollection } from "astro:content";
 const blogPosts = await getCollection("blog");
 ---
 
 <Layout>
-  <div class="relative w-full h-screen overflow-hidden bg-[url(/images/2.png)]">
+  <div class="relative w-full h-screen overflow-hidden bg-[url(/images/patch.png)]">
     <div
       class="blur-animation font-heading absolute top-80 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-[33rem] font-extrabold uppercase blur-md">
-      Portfolio
+      Victoria
     </div>
 
     <div class="relative z-10 mt-60">
-      <h1 class="text-4xl font-bold text-white text-center uppercase">
+      <h1 class="text-4xl font-bold text-offwhite text-center uppercase">
         Victoria Løkke
       </h1>
-      <p class="text-center text-white">Coded design studerende på DMJX</p>
+      <p class="text-center text-offwhite">Coded design studerende på DMJX</p>
       <div class="grid grid-cols-3 pt-20">
         <a href="/casesv2">
           <h1 class="text-center text-6xl pt-50 uppercase font-extrabold">

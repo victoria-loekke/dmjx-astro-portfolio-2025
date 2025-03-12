@@ -3,6 +3,7 @@
 @theme {
   --color-primary: #928e85;
   --color-onHover:  #991339;
+  --color-offwhite: #E8E5E2;
   --font-heading: "Bebas Neue", "sans-serif";
   --font-script: "Sedgwick Ave", cursive;
 
@@ -14,7 +15,7 @@
     filter: blur(40px);
   }
   100% {
-    filter: blur(15px);
+    filter: blur(12px);
   }
 }
 .blur-animation {

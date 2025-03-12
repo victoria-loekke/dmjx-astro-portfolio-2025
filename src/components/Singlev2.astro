@@ -1,0 +1,26 @@
+---
+const { title, text, img, img2, img3, img4, img5, img6, img7 } = Astro.props;
+---
+
+<div class="grid grid-cols-3 pt-36 p-22 gap-6">
+  <div class="sticky p-6 top-40 h-150 w-full">
+  
+    <h1
+      class="
+      text-center
+      uppercase
+      font-extrabold
+      text-7xl">
+      {title}
+    </h1>
+  </div>
+  <div class="p-12 grid gap-4 col-span-2">
+    <img src={img} />
+    <img src={img2} />
+    <img src={img3} />
+    <img src={img4} />
+    <img src={img5} />
+    <img src={img6} />
+    <img src={img7} />
+  </div>
+</div>
