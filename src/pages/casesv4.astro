@@ -1,0 +1,104 @@
+---
+import Layout from "../layouts/Layout.astro";
+import CaseOverskift from "../components/CaseOverskift.astro";
+---
+
+<script>
+  const overskrifter = document.querySelectorAll(".overskrift");
+  const billedeElement = document.getElementById("billede");
+  const originalBillede = "/images/dogcrab.png";
+  let currentBillede = originalBillede;
+
+  const infoElement = document.getElementById("info");
+  const originalInfo = "Beskrivlelskek";
+  let currentInfo = originalInfo;
+
+  if (infoElement) {
+    infoElement.innerText = originalInfo; // Initial tekst
+  }
+
+  if (billedeElement) {
+    billedeElement.src = originalBillede;
+
+    overskrifter.forEach(overskrift => {
+      overskrift.addEventListener("mouseover", function () {
+        const billedeSrc = overskrift.getAttribute("data-billede");
+        currentBillede = billedeSrc;
+        billedeElement.src = billedeSrc;
+
+        const infoText = overskrift.getAttribute("data-info");
+        currentInfo = infoText;
+        infoElement.innerText = infoText;
+      });
+
+      overskrift.addEventListener("mouseout", function () {
+        billedeElement.src = currentBillede;
+        infoElement.innerText = currentInfo;
+      });
+    });
+  }
+</script>
+
+<Layout>
+  <div
+    class="overflow-x-hidden p-15 w-full h-screen bg-[url(/images/chess.png)]">
+    <div class="h-full flex justify-center items-center">
+      <div class="bg-offwhite p-4 w-full h-full overflow-y-auto">
+        <div class="grid grid-cols-2 gap-6 p-10">
+          <img
+            id="billede"
+            src="/images/dogcrab.png"
+            class="w-full h-200 object-cover"
+          />
+          <div>
+            <div
+              class="font-heading -mt-20 text-[20rem] font-extrabold uppercase blur-xs">
+              cases
+            </div>
+            <div class="-mt-30">
+              <CaseOverskift
+                title="Eksamens projekt"
+                img="images/eksamen.png"
+                beskrivelse="Her wow info"
+              />
+              <CaseOverskift
+                title="Farvelære"
+                img="images/farver.png"
+                beskrivelse="Her strik info"
+              />
+              <CaseOverskift
+                title="Axidraw"
+                img="images/axidraw.svg"
+                beskrivelse="Her sød kat info"
+              />
+              <a href="/projekt"
+                ><CaseOverskift
+                  title="Magasin cover"
+                  img="images/maga.png"
+                  beskrivelse="Her er min info"
+                /></a
+              >
+              <CaseOverskift
+                title="Pi-plakat"
+                img="images/piplakat.jpg"
+                beskrivelse="Her er anden info"
+              />
+              <CaseOverskift
+                title="Blender Ø"
+                img="images/blender2.png"
+                beskrivelse="Her 333 info"
+              />
+              <CaseOverskift
+                title="Axi-draw plots"
+                img="images/chess.png"
+                beskrivelse="Her axi info"
+              />
+            </div>
+
+            <div id="info" class="text-4xl mt-10">tester</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
