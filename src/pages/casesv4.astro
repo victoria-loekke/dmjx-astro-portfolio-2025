@@ -1,6 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import CaseOverskift from "../components/CaseOverskift.astro";
+import WhiteBox from "../components/WhiteBox.astro";
+import BackgroundPic from "../components/BackgroundPic.astro";
 ---
 
 <script>
@@ -40,65 +42,67 @@ import CaseOverskift from "../components/CaseOverskift.astro";
 </script>
 
 <Layout>
-  <div
-    class="overflow-x-hidden p-15 w-full h-screen bg-[url(/images/chess.png)]">
-    <div class="h-full flex justify-center items-center">
-      <div class="bg-offwhite p-4 w-full h-full overflow-y-auto">
-        <div class="grid grid-cols-2 gap-6 p-10">
-          <img
-            id="billede"
-            src="/images/dogcrab.png"
-            class="w-full h-200 object-cover"
-          />
-          <div>
-            <div
-              class="font-heading -mt-20 text-[20rem] font-extrabold uppercase blur-xs">
-              cases
-            </div>
-            <div class="-mt-30">
-              <CaseOverskift
-                title="Eksamens projekt"
-                img="images/eksamen.png"
-                beskrivelse="Her wow info"
-              />
-              <CaseOverskift
-                title="Farvelære"
-                img="images/farver.png"
-                beskrivelse="Her strik info"
-              />
-              <CaseOverskift
-                title="Axidraw"
-                img="images/axidraw.svg"
-                beskrivelse="Her sød kat info"
-              />
-              <a href="/projekt"
-                ><CaseOverskift
-                  title="Magasin cover"
-                  img="images/maga.png"
-                  beskrivelse="Her er min info"
-                /></a
-              >
+  <BackgroundPic img="images/chess.png">
+    <WhiteBox>
+      <div class="grid grid-cols-2 gap-6 p-10">
+        <img
+          id="billede"
+          src="/images/dogcrab.png"
+          class="w-full h-200 object-cover"
+        />
+        <div>
+          <div
+            class="blur-animation font-heading -mt-20 text-[20rem] font-extrabold uppercase blur-xs">
+            cases
+          </div>
+          <div class="-mt-30">
+            <CaseOverskift
+              title="Eksamens projekt"
+              img="images/eksamen.png"
+              beskrivelse="Her wow info"
+            />
+            <CaseOverskift
+              title="Farvelære"
+              img="images/farver.png"
+              beskrivelse="Her strik info"
+            />
+            <CaseOverskift
+              title="Axidraw"
+              img="images/axidraw.svg"
+              beskrivelse="Her sød kat info"
+            />
+            <a href="/projektv3"
+              ><CaseOverskift
+                title="Magasin cover"
+                img="images/maga.png"
+                beskrivelse="Her er min info"
+              /></a
+            >
+            <a href="/projektv3">
               <CaseOverskift
                 title="Pi-plakat"
                 img="images/piplakat.jpg"
                 beskrivelse="Her er anden info"
-              />
+              /></a
+            >
+            <a href="/projektv3">
               <CaseOverskift
                 title="Blender Ø"
                 img="images/blender2.png"
                 beskrivelse="Her 333 info"
               />
+
               <CaseOverskift
                 title="Axi-draw plots"
                 img="images/chess.png"
                 beskrivelse="Her axi info"
               />
-            </div>
+            </a>
 
-            <div id="info" class="text-4xl mt-10">tester</div>
+            <div id="info" class="text-xl mt-18 ">tester</div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
+    </WhiteBox>
+  </BackgroundPic>
 </Layout>

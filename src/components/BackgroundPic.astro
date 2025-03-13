@@ -1,0 +1,9 @@
+---
+const { img } = Astro.props;
+---
+
+<div
+  class="overflow-x-hidden p-15 w-full h-screen"
+  style={`background-image: url(${img})`}>
+  <slot />
+</div>
