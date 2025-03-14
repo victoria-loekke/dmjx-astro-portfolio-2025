@@ -1,6 +1,5 @@
 @import "tailwindcss";
 
-
 @layer utilities {
   .no-scrollbar::-webkit-scrollbar {
     display: none;
@@ -16,7 +15,7 @@
   --color-onHover: #991339;
   --color-offwhite: #e8e5e2;
   --font-heading: "Bebas Neue", "sans-serif";
-  --font-script: "Sedgwick Ave", cursive;
+  --font-script: "Sedgwick Ave", "cursive";
   --font-text: "Helvetica Neue", "serif";
 }
 
@@ -42,4 +41,15 @@
 }
 .blur-animation {
   animation: blurIn 1s ease-out forwards;
+}
+
+.container {
+  height: 80vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+.section {
+  height: 80vh; 
+  scroll-snap-align: start;
+
 }

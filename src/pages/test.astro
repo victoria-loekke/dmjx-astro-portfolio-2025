@@ -1,0 +1,41 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Singlev2 from "../components/Singlev2.astro";
+import BackgroundPic from "../components/BackgroundPic.astro";
+import WhiteBox from "../components/WhiteBox.astro";
+---
+
+<Layout>
+  <BackgroundPic img="/images/blender2.png">
+    <WhiteBox>
+      <div class="content">
+        <div class="scrollable-section">
+          <!-- Din scrollbare indhold her -->
+          <p>Scroll down to see the effect.</p>
+          <div class="sticky-element">This element sticks to the top!</div>
+        </div>
+      </div>
+
+      <style>
+        .content {
+          height: 200vh; /* Simulerer stor skærm, så du kan scrolle */
+        }
+
+        .scrollable-section {
+          padding: 20px;
+        }
+
+        .sticky-element {
+          position: -webkit-sticky; /* For Safari */
+          position: sticky;
+          top: 10; /* Når elementet når toppen af viewporten, bliver det hængende */
+          background-color: yellow; /* For synlighed */
+          padding: 10px;
+          font-size: 20px;
+          font-weight: bold;
+          z-index: 10;
+        }
+      </style>
+    </WhiteBox>
+  </BackgroundPic>
+</Layout>
