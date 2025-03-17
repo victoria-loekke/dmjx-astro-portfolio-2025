@@ -15,8 +15,9 @@
   --color-onHover: #991339;
   --color-offwhite: #e8e5e2;
   --font-heading: "Bebas Neue", "sans-serif";
-  --font-script: "Sedgwick Ave", "cursive";
-  --font-text: "Helvetica Neue", "serif";
+  --font-script: "Snell Roundhand", "cursive";
+  --font-text: "Helvetica", "serif";
+--font-futura: "Futura", "sans-serif";
 }
 
 @keyframes blurInIndex {

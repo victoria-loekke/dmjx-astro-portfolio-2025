@@ -1,10 +1,110 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Case from "../components/Case.astro";
+import CaseOverskift from "../components/CaseOverskift.astro";
+import WhiteBox from "../components/WhiteBox.astro";
+import BackgroundPic from "../components/BackgroundPic.astro";
+import Header from "../components/Header.astro";
 ---
 
+<script>
+  const overskrifter = document.querySelectorAll(".overskrift");
+  const billedeElement = document.getElementById("billede");
+  const originalBillede = "/images/dogcrab.png";
+  let currentBillede = originalBillede;
+
+  const infoElement = document.getElementById("info");
+  const originalInfo = "Beskrivlelskek";
+  let currentInfo = originalInfo;
+
+  if (infoElement) {
+    infoElement.innerText = originalInfo; // Initial tekst
+  }
+
+  if (billedeElement) {
+    billedeElement.src = originalBillede;
+
+    overskrifter.forEach(overskrift => {
+      overskrift.addEventListener("mouseover", function () {
+        const billedeSrc = overskrift.getAttribute("data-billede");
+        currentBillede = billedeSrc;
+        billedeElement.src = billedeSrc;
+
+        const infoText = overskrift.getAttribute("data-info");
+        currentInfo = infoText;
+        infoElement.innerText = infoText;
+      });
+
+      overskrift.addEventListener("mouseout", function () {
+        billedeElement.src = currentBillede;
+        infoElement.innerText = currentInfo;
+      });
+    });
+  }
+</script>
+
 <Layout>
-  <div class="w-full h-screen bg-[url(/images/turn.png)]">
-    <h1 class="text-center text-white pt-40 text-9xl">PORTFOLIO</h1>
-  </div>
+  <BackgroundPic img="images/chess.png">
+    <WhiteBox>
+      <Header></Header>
+      <div class="grid grid-cols-2 gap-6 p-10">
+        <img
+          id="billede"
+          src="/images/dogcrab.png"
+          class="w-full h-200 object-cover"
+        />
+        <div>
+          <div
+            class="blur-animation font-heading -mt-20 text-[20rem] font-extrabold uppercase blur-xs">
+            cases
+          </div>
+          <div class="relative -mt-25">
+            <CaseOverskift
+              title="Eksamens projekt"
+              img="images/eksamen.png"
+              beskrivelse="Visuel identity "
+            />
+            <CaseOverskift
+              title="Farvelære"
+              img="images/farver.png"
+              beskrivelse="Her strik info"
+            />
+            <CaseOverskift
+              title="Axidraw"
+              img="images/axidraw.svg"
+              beskrivelse="Her sød kat info"
+            />
+            <a href="/projekt"
+              ><CaseOverskift
+                title="Magasin cover"
+                img="images/maga.png"
+                beskrivelse="Her er min info"
+              /></a
+            >
+            <a href="/projekt">
+              <CaseOverskift
+                title="Pi-plakat"
+                img="images/piplakat.jpg"
+                beskrivelse="Her er anden info"
+              /></a
+            >
+            <a href="/projekt">
+              <CaseOverskift
+                title="Blender Ø"
+                img="images/blender2.png"
+                beskrivelse="Her 333 info"
+              />
+
+              <CaseOverskift
+                title="Axi-draw plots"
+                img="images/chess.png"
+                beskrivelse="Her axi info"
+              />
+            </a>
+
+            <div id="info" class="text-3xl mt-12 font-script">tester</div>
+          </div>
+        </div>
+      </div>
+    </WhiteBox>
+  </BackgroundPic>
 </Layout>

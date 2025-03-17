@@ -1,34 +1,61 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { getCollection } from "astro:content";
-const blogPosts = await getCollection("blog");
+import Case from "../components/Case.astro";
+import IndexNav from "../components/IndexNav.astro";
 ---
 
+<script>
+  import { gsap } from "gsap";
+
+  gsap.from(".box", {
+    y: 400,
+    opacity: 0,
+    duration: 1,
+    stagger: 0.3,
+  });
+</script>
+
 <Layout>
-  <div class="relative w-full h-screen overflow-hidden bg-[url(/images/patch.png)]">
-    <div
-      class="blur-animation font-heading absolute top-80 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-[33rem] font-extrabold uppercase blur-md">
-      Victoria
-    </div>
+  <div class="overflow-x-hidden p-25 w-full h-screen bg-[url(/images/art.JPG)]">
+    <div class="h-full flex justify-center items-center">
+      <div
+        class="no-scrollbar bg-offwhite p-4 w-full h-full overflow-y-auto shadow-lg">
+        <div
+          class="-mt-25 blur-animation-index font-heading text-center text-[31rem] font-extrabold uppercase blur-md">
+          Victoria
+        </div>
 
-    <div class="relative z-10 mt-60">
-      <h1 class="text-4xl font-bold text-offwhite text-center uppercase">
-        Victoria Løkke
-      </h1>
-      <p class="text-center text-offwhite">Coded design studerende på DMJX</p>
-      <div class="grid grid-cols-3 pt-20">
-        <a href="/casesv2">
-          <h1 class="text-center text-6xl pt-50 uppercase font-extrabold">
-            Cases
-          </h1></a
-        >
+        <div class="relative -mt-90 grid grid-cols-3">
+          <IndexNav text="Cases" link="/cases" />
 
-        <img src="/images/art.JPG" class="w-full h-full col-start-2" /><a
-          href="/about">
-          <h1 class="text-center text-6xl pt-50 uppercase font-extrabold">
-            About
-          </h1></a
-        >
+          <img src="/images/art.JPG" class="w-full h-full col-start-2" />
+
+          <IndexNav text="About" link="/about" />
+
+          <Case
+            img="https://media.giphy.com/media/11xBk5MoWjrYoE/giphy.gif?cid=ecf05e47ri7x46ts1f5ao99oaq72dkeo18weut8uw5neb0vi&ep=v1_gifs_search&rid=giphy.gif&ct=g"
+            title="SCHOOL"
+          />
+
+          <div class="col-start-3">
+            <Case
+              img="https://media.giphy.com/media/11xBk5MoWjrYoE/giphy.gif?cid=ecf05e47ri7x46ts1f5ao99oaq72dkeo18weut8uw5neb0vi&ep=v1_gifs_search&rid=giphy.gif&ct=g"
+              title="ABOUT"
+            />
+          </div>
+
+          <img src="images/dogcrab.png" class="" />
+
+          <img src="images/dogcrab.png" alt="" />
+
+          <img src="images/dogcrab.png" alt="" />
+
+          <img src="images/dogcrab.png" alt="" />
+
+          <img src="images/dogcrab.png" alt="" />
+
+          <img src="images/dogcrab.png" alt="" />
+        </div>
       </div>
     </div>
   </div>
