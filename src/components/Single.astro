@@ -3,57 +3,23 @@ const { title, dato, info, text, img, img2, img3, img4, img5, img6, img7 } =
   Astro.props;
 ---
 
-
-<div class="">
-  <div class="p-2">
-
-    <a href="/cases"><p class="text-lg uppercase font-extrabold">Back</p></a>
+<div class="lg:grid lg:grid-cols-2 lg:p-10 lg:gap-6">
+  <div class="p-2 lg:sticky lg:top-10 lg:p-6 lg:h-150 lg:w-full">
+    <a href="/cases"
+      ><p class="text-lg lg:text-2xl uppercase font-extrabold">Back</p></a
+    >
 
     <div
-      class="blur-animation font-heading pt-5 leading-20 text-[5rem] font-extrabold uppercase">
+      class="blur-animation font-heading pt-5 lg:pt-10 leading-20 lg:leading-35 text-[4rem] lg:text-[10rem] font-extrabold uppercase">
       {title}
     </div>
 
-    <p class="box uppercase font-extrabold text-xl">{info}</p>
+    <p class="box uppercase font-extrabold text-xl lg:text-4xl">{info}</p>
 
-    <p class="box font-text text-xl font-light">{dato}</p>
-
-    <p class="box mt-5">{text}</p>
-    <div class="grid grid-cols-2 mt-5">
-      <p class="text-3xl uppercase font-extrabold">←</p>
-      <p class="text-right text-3xl uppercase font-extrabold">→</p>
-    </div>
-  </div>
-
-  <div class="grid gap-4">
-    <img src={img} />
-    <img src={img2} />
-    <img src={img3} />
-    <img src={img4} />
-    <img src={img5} />
-    <img src={img6} />
-    <img src={img7} />
-  </div>
-</div>
-
-
-
-
-<div class="grid grid-cols-2 p-10 gap-6">
-  <div class="sticky top-10 p-6 h-150 w-full max-w-full">
-    <a href="/cases"><p class="text-2xl uppercase font-extrabold">Back</p></a>
-
-    <div
-      class="blur-animation font-heading pt-10 leading-35 text-[10rem] font-extrabold uppercase blur-xs">
-      {title}
-    </div>
-
-    <p class="box uppercase font-extrabold text-4xl">{info}</p>
-
-    <p class="box font-text text-2xl font-light">{dato}</p>
+    <p class="box font-text text-xl lg:text-2xl font-light">{dato}</p>
 
     <p class="box mt-5">{text}</p>
-    <div class="grid grid-cols-2 mt-20">
+    <div class="grid grid-cols-2 mt-5 lg:mt-20">
       <p class="text-3xl uppercase font-extrabold">←</p>
       <p class="text-right text-3xl uppercase font-extrabold">→</p>
     </div>
