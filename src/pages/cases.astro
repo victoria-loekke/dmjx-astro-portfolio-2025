@@ -7,6 +7,17 @@ import Header from "../components/Header.astro";
 ---
 
 <script>
+  import { gsap } from "gsap";
+
+  gsap.from(".overskrift", {
+    y: 400,
+    opacity: 0,
+    duration: 1,
+    stagger: 0.1,
+  });
+</script>
+
+<script>
   const overskrifter = document.querySelectorAll(".overskrift");
   const billedeElement = document.getElementById("billede");
   const originalBillede = "/images/dogcrab.png";
@@ -45,7 +56,6 @@ import Header from "../components/Header.astro";
 <Layout>
   <BackgroundPic img="images/chess.png">
     <WhiteBox>
-      <Header></Header>
       <div class="grid grid-cols-2 gap-6 p-10">
         <img
           id="billede"
@@ -90,7 +100,7 @@ import Header from "../components/Header.astro";
             <a href="/projekt">
               <CaseOverskift
                 title="Blender Ø"
-                img="images/blender2.png"
+                img="images/blender.png"
                 beskrivelse="Her 333 info"
               />
 
@@ -101,7 +111,7 @@ import Header from "../components/Header.astro";
               />
             </a>
 
-            <div id="info" class="text-3xl mt-12 font-script">tester</div>
+            <div id="info" class="text-2xl mt-14 font-text font-light">tester</div>
           </div>
         </div>
       </div>
