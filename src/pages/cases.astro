@@ -20,11 +20,11 @@ import Header from "../components/Header.astro";
 <script>
   const overskrifter = document.querySelectorAll(".overskrift");
   const billedeElement = document.getElementById("billede");
-  const originalBillede = "/images/dogcrab.png";
+  const originalBillede = "/images/fish_cases.png";
   let currentBillede = originalBillede;
 
   const infoElement = document.getElementById("info");
-  const originalInfo = "Beskrivlelskek";
+  const originalInfo = " ";
   let currentInfo = originalInfo;
 
   if (infoElement) {
@@ -54,13 +54,13 @@ import Header from "../components/Header.astro";
 </script>
 
 <Layout>
-  <Header></Header>
-  <BackgroundPic img="images/windows.jpg">
+  <Header />
+  <BackgroundPic img="images/fish_cases.png">
     <WhiteBox>
       <div class="grid grid-cols-2 gap-6 p-10">
         <img
           id="billede"
-          src="/images/dogcrab.png"
+          src="/images/fish_cases.png"
           class="w-full h-200 object-cover"
         />
         <div>
@@ -68,51 +68,50 @@ import Header from "../components/Header.astro";
             class="blur-animation font-heading -mt-20 text-[20rem] font-extrabold uppercase blur-xs">
             cases
           </div>
-          <div class="relative -mt-25">
+          <div class="relative -mt-20">
             <CaseOverskift
-              title="Eksamens projekt"
-              img="images/eksamen.png"
-              beskrivelse="Visuel identity "
+              title="Ready Set Spaghetti"
+              img="images/f2.png"
+              beskrivelse="visuel identity & asset geneator, p5.js"
             />
             <CaseOverskift
-              title="Farvelære"
-              img="images/farver.png"
-              beskrivelse="Her strik info"
+              title="Tommelise's island"
+              img="images/blender.png"
+              beskrivelse="3D model & design, blender"
             />
-            <CaseOverskift
-              title="Axidraw"
-              img="images/axidraw.svg"
-              beskrivelse="Her sød kat info"
-            />
+
             <a href="/projekt"
               ><CaseOverskift
-                title="Magasin cover"
+                title="The Trolling Clones"
                 img="images/maga.png"
-                beskrivelse="Her er min info"
+                beskrivelse="visuel identity & photography, illustrator"
               /></a
             >
             <a href="/projekt">
               <CaseOverskift
                 title="Pi-plakat"
                 img="images/piplakat.jpg"
-                beskrivelse="Her er anden info"
-              /></a
-            >
-            <a href="/projekt">
-              <CaseOverskift
-                title="Blender Ø"
-                img="images/blender.png"
-                beskrivelse="Her 333 info"
-              />
-
-              <CaseOverskift
-                title="Axi-draw plots"
-                img="images/chess.png"
-                beskrivelse="Her axi info"
+                beskrivelse="graphic design, processing"
               />
             </a>
 
-            <div id="info" class="text-2xl mt-14 font-text font-light">tester</div>
+            <a href="/projekt">
+              <CaseOverskift
+                title="AxiDraw: Blue Waves"
+                img="images/w.png"
+                beskrivelse="graphic design, p5.js"
+              />
+            </a>
+
+            <CaseOverskift
+              title="Contrast Poster"
+              img="images/fish.png"
+              beskrivelse="visuel design, illustrator"
+            />
+
+            <div id="info" class="text-2xl mt-20 font-text font-light">
+              
+            </div>
           </div>
         </div>
       </div>

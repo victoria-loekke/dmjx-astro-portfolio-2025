@@ -1,24 +1,34 @@
 ---
 import Logo from "./Logo.astro";
-import Navigation from "./Navigation.astro";
 ---
-<div
-  class="fixed top-10 left-10 text-offwhite bg-onHover p-5 uppercase font-extrabold">
-  <h1>Home</h1>
-</div> 
 
-<div
-  class="fixed top-10 right-10 text-offwhite bg-onHover p-5 uppercase font-extrabold">
-  <h1>Cases</h1>
-</div>
+<button
+  id="toggleButton"
+  class="fixed z-100 h-20 w-20 bottom-10 right-10 text-5xl font-heading rounded-full bg-onHover"
+  >☰</button
+>
 
-<div
-  class="fixed bottom-10 left-10 text-offwhite bg-onHover p-5 uppercase font-extrabold">
-  <h1>About</h1>
-</div>
+<ul
+  id="menu"
+  style="display: none;"
+  class="bg-blue-500 z-10 fixed text-center right-0 bottom-0 w-60 h-120 pt-15 pb-20">
+  <li class="font-heading text-5xl p-4">
+    <a href="/">Home</a>
+  </li>
+  <li class="font-heading text-5xl p-4"><a href="/cases">Cases</a></li>
+  <li class="font-heading text-5xl p-4"><a href="/about">About</a></li>
+  <li class="font-heading text-5xl p-4"><a href="/contact">Contact</a></li>
+</ul>
 
-<div
-  class="fixed bottom-10 right-10 text-offwhite bg-onHover p-5 uppercase font-extrabold">
-  <h1>Contact</h1>
-</div>
-
+<script>
+  document
+    .getElementById("toggleButton")
+    .addEventListener("click", function () {
+      const menu = document.getElementById("menu");
+      if (menu.style.display === "none") {
+        menu.style.display = "block";
+      } else {
+        menu.style.display = "none";
+      }
+    });
+</script>
