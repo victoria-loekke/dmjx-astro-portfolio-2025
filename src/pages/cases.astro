@@ -57,18 +57,33 @@ import Header from "../components/Header.astro";
   <Header />
   <BackgroundPic img="images/fish_cases.png">
     <WhiteBox>
-      <div class="grid grid-cols-2 gap-6 p-10">
+      <div
+        class="md:grid md:grid-cols-2 md:gap-6 md:p-10
+      xl:ml-30 xl:mr-30
+      2xl:ml-0 2xl:mr-0">
         <img
           id="billede"
           src="/images/fish_cases.png"
-          class="w-full h-200 object-cover"
+          class="hidden
+          md:inline md:w-full md:h-200 md:object-cover
+          xl:h-125
+          2xl:h-200"
         />
         <div>
           <div
-            class="blur-animation font-heading -mt-20 text-[20rem] font-extrabold uppercase blur-xs">
+            class="blur-animation font-heading font-extrabold uppercase text-center
+        text-[10rem]
+        md:text-left md:text-[12rem]
+        xl:-mt-10
+        2xl:-mt-20 2xl:text-[20rem]">
             cases
           </div>
-          <div class="relative -mt-20">
+
+          <div
+            class="p-2
+          md:p-0 md:relative
+          xl:mt-[-60px]
+          2xl:mt-[-65px]">
             <CaseOverskift
               title="Ready Set Spaghetti"
               img="images/f2.png"
@@ -109,8 +124,11 @@ import Header from "../components/Header.astro";
               beskrivelse="visuel design, illustrator"
             />
 
-            <div id="info" class="text-2xl mt-20 font-text font-light">
-              
+            <div
+              id="info"
+              class="font-text font-light
+            text-xl mt-10
+            2xl:text-2xl 2xl:mt-20">
             </div>
           </div>
         </div>

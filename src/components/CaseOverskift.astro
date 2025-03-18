@@ -3,14 +3,10 @@ const { title, img, beskrivelse } = Astro.props;
 ---
 
 <h1
-  class="overskrift
-        text-3xl
-        leading-15
-       uppercase
-        font-extrabold
-        cursor-pointer
-        hover:text-onHover
-        "
+  class="overskrift uppercase font-extrabold cursor-pointer hover:text-onHover
+        text-2xl leading-15
+        xl:leading-10
+        2xl:text-3xl 2xl:leading-15"
   data-billede={img}
   data-info={beskrivelse}>
   {title}
