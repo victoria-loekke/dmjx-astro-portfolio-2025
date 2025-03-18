@@ -16,47 +16,69 @@ import IndexNav from "../components/IndexNav.astro";
 </script>
 
 <Layout>
-  <div class="overflow-x-hidden p-25 w-full h-screen bg-[url(/images/art.JPG)]">
+  <div
+    class="overflow-x-hidden w-full h-screen bg-[url(/images/art.JPG)] p-8 md:p-12 xl:p-18 2xl:p-25">
     <div class="h-full flex justify-center items-center">
       <div
-        class="no-scrollbar bg-offwhite p-4 w-full h-full overflow-y-auto shadow-lg">
+        class="no-scrollbar bg-offwhite w-full h-full overflow-y-auto shadow-lg">
         <div
-          class="-mt-25 blur-animation-index font-heading text-center text-[31rem] font-extrabold uppercase blur-md">
+          class="blur-animation-index font-heading text-center font-extrabold text-[7rem] pt-8">
           Victoria
         </div>
-
-        <div class="relative -mt-90 grid grid-cols-3">
-          <IndexNav text="Cases" link="/cases" />
-
-          <img src="/images/art.JPG" class="w-full h-full col-start-2 object-cover" />
-
-          <IndexNav text="About" link="/about" />
-
-          <Case
-            img="https://media.giphy.com/media/11xBk5MoWjrYoE/giphy.gif?cid=ecf05e47ri7x46ts1f5ao99oaq72dkeo18weut8uw5neb0vi&ep=v1_gifs_search&rid=giphy.gif&ct=g"
-            title="SCHOOL"
-          />
-
-          <div class="col-start-3">
-            <Case
-              img="https://media.giphy.com/media/11xBk5MoWjrYoE/giphy.gif?cid=ecf05e47ri7x46ts1f5ao99oaq72dkeo18weut8uw5neb0vi&ep=v1_gifs_search&rid=giphy.gif&ct=g"
-              title="ABOUT"
-            />
-          </div>
-
-          <img src="images/dogcrab.png" class="" />
-
-          <img src="images/dogcrab.png" alt="" />
-
-          <img src="images/dogcrab.png" alt="" />
-
-          <img src="images/dogcrab.png" alt="" />
-
-          <img src="images/dogcrab.png" alt="" />
-
-          <img src="images/dogcrab.png" alt="" />
-        </div>
+        <img src="/images/art.JPG" class="w-full p-5 -mt-10" />
+        <IndexNav text="Cases" link="/cases" />
+        <IndexNav text="About" link="/about" />
       </div>
     </div>
   </div>
+
+  <Layout>
+    <div
+      class="overflow-x-hidden p-25 w-full h-screen bg-[url(/images/art.JPG)]">
+      <div class="h-full flex justify-center items-center">
+        <div
+          class="no-scrollbar bg-offwhite p-4 w-full h-full overflow-y-auto shadow-lg">
+          <div
+            class="-mt-25 blur-animation-index font-heading text-center text-[31rem] font-extrabold uppercase blur-md">
+            Victoria
+          </div>
+
+          <div class="relative -mt-90 grid grid-cols-3">
+            <IndexNav text="Cases" link="/cases" />
+
+            <img
+              src="/images/art.JPG"
+              class="w-full h-full col-start-2 object-cover"
+            />
+
+            <IndexNav text="About" link="/about" />
+
+            <Case
+              img="https://media.giphy.com/media/11xBk5MoWjrYoE/giphy.gif?cid=ecf05e47ri7x46ts1f5ao99oaq72dkeo18weut8uw5neb0vi&ep=v1_gifs_search&rid=giphy.gif&ct=g"
+              title="SCHOOL"
+            />
+
+            <div class="col-start-3">
+              <Case
+                img="https://media.giphy.com/media/11xBk5MoWjrYoE/giphy.gif?cid=ecf05e47ri7x46ts1f5ao99oaq72dkeo18weut8uw5neb0vi&ep=v1_gifs_search&rid=giphy.gif&ct=g"
+                title="ABOUT"
+              />
+            </div>
+
+            <img src="images/dogcrab.png" class="" />
+
+            <img src="images/dogcrab.png" alt="" />
+
+            <img src="images/dogcrab.png" alt="" />
+
+            <img src="images/dogcrab.png" alt="" />
+
+            <img src="images/dogcrab.png" alt="" />
+
+            <img src="images/dogcrab.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </Layout>
 </Layout>

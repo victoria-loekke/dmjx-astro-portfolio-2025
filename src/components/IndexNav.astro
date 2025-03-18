@@ -2,11 +2,8 @@
 const { text, link } = Astro.props;
 ---
 
-<div class="sticky -top-85 z-10">
-  <a href={link}>
-    <h1
-      class="box text-center text-6xl mt-80 p-10 uppercase font-extrabold bg-offwhite hover:text-onHover">
-      {text}
-    </h1></a
-  >
-</div>
+<a href={link}>
+  <h1 class="box uppercase font-extrabold hover:text-onHover text-center text-3xl pt-4">
+    {text}
+  </h1></a
+>
