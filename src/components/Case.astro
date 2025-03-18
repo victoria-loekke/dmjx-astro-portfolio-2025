@@ -2,10 +2,12 @@
 const { img, title } = Astro.props;
 ---
 
-<div class="relative w-full h-150 mt-50 mb-10 overflow-hidden group">
+<div class="relative w-full h-120 mt-50 mb-10 overflow-hidden group
+2xl:h-150">
   <img
     src={img}
-    class="w-full h-150 p-6 object-cover blur-none transition-all duration-500 group-hover:blur-xs"
+    class="w-full h-120 p-4 object-cover blur-none transition-all duration-500 group-hover:blur-xs
+    2xl:h-150"
     alt=""
   />
   <div

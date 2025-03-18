@@ -20,65 +20,66 @@ import IndexNav from "../components/IndexNav.astro";
     class="overflow-x-hidden w-full h-screen bg-[url(/images/art.JPG)] p-8 md:p-12 xl:p-18 2xl:p-25">
     <div class="h-full flex justify-center items-center">
       <div
-        class="no-scrollbar bg-offwhite w-full h-full overflow-y-auto shadow-lg">
+        class="no-scrollbar bg-offwhite w-full h-full overflow-y-auto shadow-lg
+        xl:p-4">
         <div
-          class="blur-animation-index font-heading text-center font-extrabold text-[7rem] pt-8">
+          class="blur-animation-index font-heading text-center font-extrabold text-[7rem] pt-8
+          md:text-[20rem] md:pt-0
+          xl:text-[25rem] xl:-mt-20
+          2xl:text-[31rem] 2xl:-mt-25">
           Victoria
         </div>
-        <img src="/images/art.JPG" class="w-full p-5 -mt-10" />
-        <IndexNav text="Cases" link="/cases" />
-        <IndexNav text="About" link="/about" />
-      </div>
-    </div>
-  </div>
 
-  <Layout>
-    <div
-      class="overflow-x-hidden p-25 w-full h-screen bg-[url(/images/art.JPG)]">
-      <div class="h-full flex justify-center items-center">
-        <div
-          class="no-scrollbar bg-offwhite p-4 w-full h-full overflow-y-auto shadow-lg">
-          <div
-            class="-mt-25 blur-animation-index font-heading text-center text-[31rem] font-extrabold uppercase blur-md">
-            Victoria
-          </div>
-
-          <div class="relative -mt-90 grid grid-cols-3">
-            <IndexNav text="Cases" link="/cases" />
-
+        <div class="xl:relative xl:-mt-90 xl:grid xl:grid-cols-3">
+          <div class="xl:col-start-2">
             <img
               src="/images/art.JPG"
-              class="w-full h-full col-start-2 object-cover"
+              class="w-full p-5 -mt-5
+        md:pl-40 md:pr-40 md:-mt-30
+        xl:p-15 xl:mt-0
+        2xl:h-full 2xl:p-0"
             />
+          </div>
 
+          <div
+            class="xl:sticky xl:-top-70 xl:z-10 xl:col-start-1 xl:row-start-1
+            2xl:-top-85">
+            <IndexNav text="Cases" link="/cases" />
+          </div>
+
+          <div
+            class="xl:sticky xl:-top-70 xl:z-10 xl:col-start-3
+          2xl:-top-85">
             <IndexNav text="About" link="/about" />
+          </div>
 
+          <div class="hidden xl:inline">
             <Case
               img="https://media.giphy.com/media/11xBk5MoWjrYoE/giphy.gif?cid=ecf05e47ri7x46ts1f5ao99oaq72dkeo18weut8uw5neb0vi&ep=v1_gifs_search&rid=giphy.gif&ct=g"
               title="SCHOOL"
             />
-
-            <div class="col-start-3">
-              <Case
-                img="https://media.giphy.com/media/11xBk5MoWjrYoE/giphy.gif?cid=ecf05e47ri7x46ts1f5ao99oaq72dkeo18weut8uw5neb0vi&ep=v1_gifs_search&rid=giphy.gif&ct=g"
-                title="ABOUT"
-              />
-            </div>
-
-            <img src="images/dogcrab.png" class="" />
-
-            <img src="images/dogcrab.png" alt="" />
-
-            <img src="images/dogcrab.png" alt="" />
-
-            <img src="images/dogcrab.png" alt="" />
-
-            <img src="images/dogcrab.png" alt="" />
-
-            <img src="images/dogcrab.png" alt="" />
           </div>
+
+          <div class="hidden xl:inline xl:col-start-3">
+            <Case
+              img="https://media.giphy.com/media/11xBk5MoWjrYoE/giphy.gif?cid=ecf05e47ri7x46ts1f5ao99oaq72dkeo18weut8uw5neb0vi&ep=v1_gifs_search&rid=giphy.gif&ct=g"
+              title="ABOUT"
+            />
+          </div>
+
+          <img src="images/dogcrab.png" class="p-4" />
+
+          <img src="images/dogcrab.png" class="p-4" />
+
+          <img src="images/dogcrab.png" class="p-4" />
+
+          <img src="images/dogcrab.png" class="p-4" />
+
+          <img src="images/dogcrab.png" class="p-4" />
+
+          <img src="images/dogcrab.png" class="p-4" />
         </div>
       </div>
     </div>
-  </Layout>
+  </div>
 </Layout>
