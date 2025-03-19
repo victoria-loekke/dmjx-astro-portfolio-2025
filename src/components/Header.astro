@@ -2,22 +2,31 @@
 import Logo from "./Logo.astro";
 ---
 
-<button
-  id="toggleButton"
-  class="fixed z-100 h-20 w-20 bottom-10 right-10 text-5xl font-heading rounded-full bg-onHover"
-  >☰</button
->
+<div class="fixed bottom-5 right-5 flex items-center space-x-3 z-100">
+  <button
+    id="toggleButton"
+    class="z-500 h-40 w-40 font-heading text-4xl bg-cover bg-center bg-no-repeat"
+    style="background-image: url('images/star.png');">
+    ☰
+  </button>
+</div>
 
 <ul
   id="menu"
   style="display: none;"
-  class="bg-blue-500 z-10 fixed text-center right-0 bottom-0 w-60 h-120 pt-15 pb-20">
-  <li class="font-heading text-5xl p-4">
+  class="bg-blue-600 z-10 fixed text-center right-0 bottom-0 w-80 h-130 pt-15 pb-20">
+  <li class="text-3xl p-4 uppercase font-extrabold">
     <a href="/">Home</a>
   </li>
-  <li class="font-heading text-5xl p-4"><a href="/cases">Cases</a></li>
-  <li class="font-heading text-5xl p-4"><a href="/about">About</a></li>
-  <li class="font-heading text-5xl p-4"><a href="/contact">Contact</a></li>
+  <li class="text-3xl p-4 uppercase font-extrabold">
+    <a href="/cases">Cases</a>
+  </li>
+  <li class="text-3xl p-4 uppercase font-extrabold">
+    <a href="/about">About</a>
+  </li>
+  <li class="text-3xl p-4 uppercase font-extrabold">
+    <a href="/contact">Contact</a>
+  </li>
 </ul>
 
 <script>
@@ -25,10 +34,13 @@ import Logo from "./Logo.astro";
     .getElementById("toggleButton")
     .addEventListener("click", function () {
       const menu = document.getElementById("menu");
+      const toggleButton = document.getElementById("toggleButton");
       if (menu.style.display === "none") {
         menu.style.display = "block";
+        toggleButton.textContent = "X";
       } else {
         menu.style.display = "none";
+        toggleButton.textContent = "☰";
       }
     });
 </script>

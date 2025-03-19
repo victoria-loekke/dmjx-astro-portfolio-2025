@@ -1,0 +1,40 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Single from "../components/Single.astro";
+import BackgroundPic from "../components/BackgroundPic.astro";
+import WhiteBox from "../components/WhiteBox.astro";
+import Header from "../components/Header.astro";
+---
+
+<script>
+  import { gsap } from "gsap";
+
+  gsap.from(".box", {
+    y: 400,
+    opacity: 0,
+    duration: 1,
+    stagger: 0.1,
+  });
+</script>
+
+<Layout>
+  <Header />
+  <BackgroundPic img="/images/ttc/1.png">
+    <WhiteBox>
+      <Single
+        title="The Trolling Clones"
+        dato="Februar 2025"
+        info="Made in Adobe Photoshop"
+        text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        img="/images/ttc/1.png"
+        img2="/images/ttc/2.png"
+        img3="/images/ttc/3.png"
+        img4="/images/ttc/4.png"
+        img5="/images/ttc/5.png"
+        img6="/images/ttc/6.png"
+        tilbage="/rrs"
+        frem="/blender"
+      />
+    </WhiteBox>
+  </BackgroundPic>
+</Layout>

@@ -1,16 +1,32 @@
 ---
-const { title, dato, info, text, img, img2, img3, img4, img5, img6, img7 } =
-  Astro.props;
+const {
+  title,
+  dato,
+  info,
+  text,
+  img,
+  film,
+  img2,
+  img3,
+  img4,
+  img5,
+  img6,
+  img7,
+  tilbage,
+  frem,
+} = Astro.props;
 ---
 
 <div class="md:pl-20 md:pr-20 md:pt-10
 xl:grid xl:grid-cols-2 xl:p-10 xl:gap-6">
   <div class="p-2
-  xl:sticky xl:top-10 xl:w-full xl:p-6  xl:h-150
-   ">
+  xl:sticky xl:top-10 xl:w-full xl:p-6 xl:h-150">
     <a href="/cases"
-      ><p class="text-lg  uppercase font-extrabold
-      2xl:text-2xl">Back</p></a
+      ><p
+        class="text-lg uppercase font-extrabold hover:text-onHover
+      2xl:text-2xl">
+        Back
+      </p></a
     >
 
     <div
@@ -20,24 +36,36 @@ xl:grid xl:grid-cols-2 xl:p-10 xl:gap-6">
       {title}
     </div>
 
-    <p class="box uppercase font-extrabold text-xl 
+    <p class="box uppercase font-extrabold text-xl
     lg:text-4xl
-    xl:mt-2">{info}</p>
+    xl:mt-2">
+      {info}
+    </p>
 
     <p class="box font-text text-xl font-light
     xl:text-xl
-    2xl:text-2xl ">{dato}</p>
+    2xl:text-2xl">
+      {dato}
+    </p>
 
     <p class="box mt-5 text-sm
     xl:text-md
     2xl:text-lg">{text}</p>
     <div class="grid grid-cols-2 mt-5 lg:mt-20">
-      <p class="text-3xl uppercase font-extrabold">←</p>
-      <p class="text-right text-3xl uppercase font-extrabold">→</p>
+      <a
+        href={tilbage}
+        class="text-3xl uppercase font-extrabold hover:text-onHover">←</a
+      >
+
+      <a
+        href={frem}
+        class="text-right text-3xl uppercase font-extrabold hover:text-onHover"
+        >→</a
+      >
     </div>
   </div>
-
   <div class="grid gap-4">
+    {film ? <video src={film} autoplay muted loop /> : null}
     <img src={img} />
     <img src={img2} />
     <img src={img3} />

@@ -1,0 +1,38 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Single from "../components/Single.astro";
+import BackgroundPic from "../components/BackgroundPic.astro";
+import WhiteBox from "../components/WhiteBox.astro";
+import Header from "../components/Header.astro";
+---
+
+<script>
+  import { gsap } from "gsap";
+
+  gsap.from(".box", {
+    y: 400,
+    opacity: 0,
+    duration: 1,
+    stagger: 0.1,
+  });
+</script>
+
+<Layout>
+  <Header />
+  <BackgroundPic img="/images/fish_cases.png">
+    <WhiteBox>
+      <Single
+        title="Pi PLakat"
+        dato="November 2024"
+        info="Made in Processing"
+        text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        film="images/pi/1.MOV"
+        img="/images/pi/2.jpg"
+        img2="/images/pi/3.png"
+        img3="/images/pi/4.jpg"
+        tilbage="/contrast"
+        frem="/rss"
+      />
+    </WhiteBox>
+  </BackgroundPic>
+</Layout>

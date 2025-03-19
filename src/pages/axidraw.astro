@@ -1,0 +1,40 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Single from "../components/Single.astro";
+import BackgroundPic from "../components/BackgroundPic.astro";
+import WhiteBox from "../components/WhiteBox.astro";
+import Header from "../components/Header.astro";
+---
+
+<script>
+  import { gsap } from "gsap";
+
+  gsap.from(".box", {
+    y: 400,
+    opacity: 0,
+    duration: 1,
+    stagger: 0.1,
+  });
+</script>
+
+<Layout>
+  <Header />
+  <BackgroundPic img="/images/axidraw/axibg.png">
+    <WhiteBox>
+      <Single
+        title="AxiDraw"
+        dato="December 2024"
+        info="Made in p5.js"
+        text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        img="/images/axidraw/1.png"
+        film="/images/axidraw/2.MOV"
+        img2="/images/axidraw/3.png"
+        img3="/images/axidraw/4.png"
+        img4="/images/axidraw/5.png"
+        img5="/images/axidraw/6.png"
+        tilbage="/blender"
+        frem="/contrast"
+      />
+    </WhiteBox>
+  </BackgroundPic>
+</Layout>

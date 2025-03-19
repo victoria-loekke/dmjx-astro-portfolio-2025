@@ -1,0 +1,41 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Single from "../components/Single.astro";
+import BackgroundPic from "../components/BackgroundPic.astro";
+import WhiteBox from "../components/WhiteBox.astro";
+import Header from "../components/Header.astro";
+---
+
+<script>
+  import { gsap } from "gsap";
+
+  gsap.from(".box", {
+    y: 400,
+    opacity: 0,
+    duration: 1,
+    stagger: 0.1,
+  });
+</script>
+
+<Layout>
+  <Header />
+  <BackgroundPic img="/images/fish_cases.png">
+    <WhiteBox>
+      <Single
+        title="Contrast poster"
+        dato="September 2024"
+        info="Made in Abobe Illustrator"
+        text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        img="/images/contrast/1.png"
+        img2="/images/contrast/2.png"
+        img3="/images/contrast/3.png"
+        img4="/images/contrast/4.png"
+        img5="/images/contrast/5.png"
+        img6="/images/contrast/6.png"
+
+        tilbage="/axidraw"
+        frem="/pi"
+      />
+    </WhiteBox>
+  </BackgroundPic>
+</Layout>

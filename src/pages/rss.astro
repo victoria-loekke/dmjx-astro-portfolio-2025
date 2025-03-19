@@ -1,0 +1,40 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Single from "../components/Single.astro";
+import BackgroundPic from "../components/BackgroundPic.astro";
+import WhiteBox from "../components/WhiteBox.astro";
+import Header from "../components/Header.astro";
+---
+
+<script>
+  import { gsap } from "gsap";
+
+  gsap.from(".box", {
+    y: 400,
+    opacity: 0,
+    duration: 1,
+    stagger: 0.1,
+  });
+</script>
+
+<Layout>
+  <Header />
+  <BackgroundPic img="/images/rss/bg.png">
+    <WhiteBox>
+      <Single
+        title="Ready Set Spaghetti"
+        dato="Januar 2025"
+        info="Made in Illustrator & p5.js"
+        text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        img="/images/rss/1.png"
+        img2="/images/rss/2.png"
+        img3="/images/rss/3.png"
+        img4="/images/rss/4.png"
+        img5="/images/rss/5.jpg"
+        img6="/images/rss/6.jpg"
+        tilbage="/pi"
+        frem="/ttc"
+      />
+    </WhiteBox>
+  </BackgroundPic>
+</Layout>
