@@ -3,22 +3,34 @@ const { title, dato, info, text, img, img2, img3, img4, img5, img6, img7 } =
   Astro.props;
 ---
 
-<div class="lg:grid lg:grid-cols-2 lg:p-10 lg:gap-6">
-  <div class="p-2 lg:sticky lg:top-10 lg:p-6 lg:h-150 lg:w-full">
+<div class="md:pl-20 md:pr-20 md:pt-10
+xl:grid xl:grid-cols-2 xl:p-10 xl:gap-6">
+  <div class="p-2
+  xl:sticky xl:top-10 xl:w-full xl:p-6  xl:h-150
+   ">
     <a href="/cases"
-      ><p class="text-lg lg:text-2xl uppercase font-extrabold">Back</p></a
+      ><p class="text-lg  uppercase font-extrabold
+      2xl:text-2xl">Back</p></a
     >
 
     <div
-      class="blur-animation font-heading pt-5 lg:pt-10 leading-20 lg:leading-35 text-[4rem] lg:text-[10rem] font-extrabold uppercase">
+      class="blur-animation font-heading pt-5 leading-17 text-[4rem] font-extrabold
+      md:text-[5rem]
+      2xl:pt-10 2xl:leading-35 2xl:text-[10rem]">
       {title}
     </div>
 
-    <p class="box uppercase font-extrabold text-xl lg:text-4xl">{info}</p>
+    <p class="box uppercase font-extrabold text-xl 
+    lg:text-4xl
+    xl:mt-2">{info}</p>
 
-    <p class="box font-text text-xl lg:text-2xl font-light">{dato}</p>
+    <p class="box font-text text-xl font-light
+    xl:text-xl
+    2xl:text-2xl ">{dato}</p>
 
-    <p class="box mt-5">{text}</p>
+    <p class="box mt-5 text-sm
+    xl:text-md
+    2xl:text-lg">{text}</p>
     <div class="grid grid-cols-2 mt-5 lg:mt-20">
       <p class="text-3xl uppercase font-extrabold">←</p>
       <p class="text-right text-3xl uppercase font-extrabold">→</p>

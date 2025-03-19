@@ -7,11 +7,20 @@ import IndexNav from "../components/IndexNav.astro";
 <script>
   import { gsap } from "gsap";
 
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+  gsap.registerPlugin(ScrollTrigger);
+
   gsap.from(".box", {
     y: 400,
     opacity: 0,
     duration: 1,
     stagger: 0.3,
+  });
+
+  gsap.to(".pic", {
+    scrollTrigger: ".pic",
+    x: 500,
   });
 </script>
 
@@ -67,7 +76,7 @@ import IndexNav from "../components/IndexNav.astro";
             />
           </div>
 
-          <img src="images/dogcrab.png" class="p-4 hidden xl:inline" />
+          <img src="images/dogcrab.png" class="pic p-4 hidden xl:inline" />
 
           <img src="images/dogcrab.png" class="p-4 hidden xl:inline" />
 
