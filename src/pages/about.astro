@@ -1,27 +1,93 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Case from "../components/Case.astro";
 import Header from "../components/Header.astro";
 import BackgroundPic from "../components/BackgroundPic.astro";
 import WhiteBox from "../components/WhiteBox.astro";
 ---
 
+<style>
+  .pic {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+</style>
+
 <Layout>
   <Header />
 
-  <BackgroundPic img="images/art1.JPG">
+  <BackgroundPic img="/images/art1.JPG">
     <WhiteBox>
-      <div class="grid grid-cols-3">
-        <div></div>
-        <div></div>
+      <div class="xl:hidden">
+        <img src="/images/art1.JPG" class="" />
+        <p class="font-neue font-extrabold text-4xl">
+          hello, my name is victoria <br /> i like dogs and fishes.
+        </p>
+      </div>
+
+      <div
+        class="hidden
+      xl:grid xl:grid-cols-6 xl:grid-rows-4 xl:gap-4 xl:p-4 xl:h-full">
+        <img src="/images/art1.JPG" class="pic col-span-1 row-span-1" />
+        <img src="/images/art1.JPG" class="pic col-span-1 row-span-1" />
+        <img src="/images/art1.JPG" class="pic col-span-1 row-span-1" />
+        <img src="/images/art1.JPG" class="pic col-span-1 row-span-1" />
+        <img src="/images/art1.JPG" class="pic col-span-1 row-span-1" />
+        <img src="/images/art1.JPG" class="pic col-span-1 row-span-1" />
+        <img src="/images/art1.JPG" class="pic col-span-1 row-span-1" />
         <img
-          
-          src="/images/w1.png"
-          class="hidden
-          md:inline md:w-full md:h-200 md:object-cover
-          xl:h-125
-          2xl:h-200"
+          src="/images/art1.JPG"
+          class="pic col-start-6 col-span-1 row-span-1"
         />
+        <img
+          src="/images/art1.JPG"
+          class="pic col-start-6 col-span-1 row-start-3 row-span-1"
+        />
+        <img
+          src="/images/art1.JPG"
+          class="pic col-start-6 col-span-1 row-start-4 row-span-1"
+        />
+        <img
+          src="/images/art1.JPG"
+          class="pic col-start-1 col-span-1 row-start-3 row-span-1"
+        />
+        <img
+          src="/images/art1.JPG"
+          class="pic col-start-1 col-span-1 row-start-4 row-span-1"
+        />
+        <img
+          src="/images/art1.JPG"
+          class="pic col-start-2 col-span-1 row-start-4 row-span-1"
+        />
+        <img
+          src="/images/art1.JPG"
+          class="pic col-start-3 col-span-1 row-start-4 row-span-1"
+        />
+        <img
+          src="/images/art1.JPG"
+          class="pic col-start-4 col-span-1 row-start-4 row-span-1"
+        />
+        <img
+          src="/images/art1.JPG"
+          class="pic col-start-5 col-span-1 row-start-4 row-span-1"
+        />
+
+        <div class="col-start-3 col-span-2 row-start-2 row-span-2">
+          <p
+            class="font-neue font-extrabold 
+            text-2xl pt-15
+          2xl:pt-30 2xl:text-4xl">
+            hello, my name is victoria
+            <br /> i like dogs and fishes.
+          </p>
+        </div>
+        <div class="col-start-4 col-span-2 row-start-3 row-span-2">
+          <p class="font-neue font-extrabold text-2xl
+          2xl:text-4xl">
+            also i study
+            <br /> its super fun (sometimes)
+          </p>
+        </div>
       </div>
     </WhiteBox>
   </BackgroundPic>

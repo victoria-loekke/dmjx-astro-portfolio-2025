@@ -45,10 +45,10 @@ import IndexNav from "../components/IndexNav.astro";
           <div class="xl:col-start-2">
             <img
               src="/images/art.JPG"
-              class="w-full p-5 -mt-5
+              class="w-full p-5 -mt-5 object-cover object-center
         md:pl-40 md:pr-40 md:-mt-30
-        xl:p-15 xl:mt-0
-         2xl:p-0"
+        xl:p-15 xl:mt-10
+         2xl:p-0 2xl:h-110"
             />
           </div>
 
@@ -57,10 +57,11 @@ import IndexNav from "../components/IndexNav.astro";
               bg-cover bg-center bg-no-repeat flex items-center justify-center
               h-17 w-17 bottom-20
               2xl:h-20 2xl:w-20 2xl:bottom-25">
-            <p
-              class="font-extrabold font-neue text-center whitespace-nowrap">
-              contact me
-            </p>
+            <a href="/contact">
+              <p class="font-extrabold font-neue text-center whitespace-nowrap hover:scale-200 transition-all duration-500">
+                contact me
+              </p></a
+            >
           </div>
 
           <div
