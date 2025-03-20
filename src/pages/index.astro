@@ -7,10 +7,6 @@ import IndexNav from "../components/IndexNav.astro";
 <script>
   import { gsap } from "gsap";
 
-  import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-  gsap.registerPlugin(ScrollTrigger);
-
   gsap.from(".box", {
     y: 400,
     opacity: 0,
@@ -18,10 +14,7 @@ import IndexNav from "../components/IndexNav.astro";
     stagger: 0.3,
   });
 
-  gsap.to(".pic", {
-    scrollTrigger: ".pic",
-    x: 500,
-  });
+
 </script>
 
 <Layout>

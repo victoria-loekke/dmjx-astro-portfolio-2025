@@ -13,6 +13,17 @@ import WhiteBox from "../components/WhiteBox.astro";
   }
 </style>
 
+<script>
+  import { gsap } from "gsap";
+
+  gsap.from(".box", {
+    y: 400,
+    opacity: 0,
+    duration: 1,
+    stagger: 0.3,
+  });
+</script>
+
 <Layout>
   <Header />
 
@@ -72,16 +83,16 @@ import WhiteBox from "../components/WhiteBox.astro";
           class="pic col-start-5 col-span-1 row-start-4 row-span-1"
         />
 
-        <div class="col-start-3 col-span-2 row-start-2 row-span-2">
+        <div class="box col-start-3 col-span-2 row-start-2 row-span-2">
           <p
-            class="font-neue font-extrabold 
+            class="font-neue font-extrabold
             text-2xl pt-15
           2xl:pt-30 2xl:text-4xl">
             hello, my name is victoria
             <br /> i like dogs and fishes.
           </p>
         </div>
-        <div class="col-start-4 col-span-2 row-start-3 row-span-2">
+        <div class="box col-start-4 col-span-2 row-start-3 row-span-2">
           <p class="font-neue font-extrabold text-2xl
           2xl:text-4xl">
             also i study
