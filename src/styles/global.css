@@ -29,7 +29,7 @@
     filter: blur(40px);
   }
   100% {
-    filter: blur(8px);
+    filter: blur(7px);
   }
 }
 .blur-animation-index {
@@ -40,7 +40,7 @@
 
 @keyframes blurInCases {
   0% {
-    filter: blur(25px);
+    filter: blur(20px);
   }
   100% {
     filter: blur(5px);
@@ -54,7 +54,7 @@
 
 @keyframes blurInSingle {
   0% {
-    filter: blur(20px);
+    filter: blur(15px);
   }
   100% {
     filter: blur(2px);
@@ -68,7 +68,7 @@
 @media (max-width: 768px) {  
   @keyframes blurInSingle {
     0% {
-      filter: blur(15px);
+      filter: blur(10px);
     }
     100% {
       filter: blur(1px); 
