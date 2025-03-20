@@ -9,33 +9,19 @@
     scrollbar-width: none;
   }
 }
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-@font-face {
-  font-family: 'Neue Haas';
-  src: url('/fonts/NHaasGroteskTXPro-55Rg.ttf') format('truetype'); 
-  font-weight: 400; 
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Neue Haas';
-  src: url('/fonts/NHaasGroteskTXPro-65Md.ttf') format('truetype'); 
-  font-weight: 600; 
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Neue Haas';
-  src: url('/fonts/NHaasGroteskTXPro-75Bd.ttf') format('truetype'); 
-  font-weight: 900; 
-  font-style: normal;
-}
+
 @theme {
   --color-primary: #928e85;
-  --color-onHover: #991339;
+  --color-onHover: #D4DD51;
+ --color-røde: #991339;
   --color-offwhite: #e8e5e2;
   --font-heading: "Bebas Neue", "sans-serif";
   --font-script: "Snell Roundhand", "cursive";
   --font-text: "Helvetica", "serif";
 --font-futura: "Futura", "sans-serif";
+  --font-neue: "neue-haas-grotesk-display", sans-serif;
+  --font-europa: "europa", sans-serif;
+
 }
 
 @keyframes blurInIndex {
@@ -61,14 +47,14 @@
 .blur-animation {
   animation: blurIn 1s ease-out forwards;
 }
-
-.container {
-  height: 80vh;
-  overflow-y: scroll;
-  scroll-snap-type: y mandatory;
+@media (max-width: 640px) {
+  @keyframes blurIn {
+    0% {
+      filter: blur(10px); /* Mindre blur for mobil */
+    }
+    100% {
+      filter: blur(2px);  /* Mindre blur for mobil */
+    }
+  }
 }
-.section {
-  height: 80vh; 
-  scroll-snap-align: start;
 
-}

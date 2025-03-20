@@ -5,8 +5,10 @@ import Logo from "./Logo.astro";
 <div class="fixed bottom-5 right-5 flex items-center space-x-3 z-100">
   <button
     id="toggleButton"
-    class="z-500 h-40 w-40 font-heading text-4xl bg-cover bg-center bg-no-repeat"
-    style="background-image: url('images/star.png');">
+    class="z-500 font-neue font-extrabold text-4xl bg-cover bg-center bg-no-repeat
+    h-20 w-20
+    xl:h-35 xl:w-35"
+    style="background-image: url('images/star2.png');">
     ☰
   </button>
 </div>
@@ -15,16 +17,16 @@ import Logo from "./Logo.astro";
   id="menu"
   style="display: none;"
   class="bg-blue-600 z-10 fixed text-center right-0 bottom-0 w-80 h-130 pt-15 pb-20 box">
-  <li class="text-3xl p-4 uppercase font-extrabold">
+  <li class="text-3xl p-4 font-neue font-extrabold">
     <a href="/">Home</a>
   </li>
-  <li class="text-3xl p-4 uppercase font-extrabold">
+  <li class="text-3xl p-4 font-neue font-extrabold">
     <a href="/cases">Cases</a>
   </li>
-  <li class="text-3xl p-4 uppercase font-extrabold">
+  <li class="text-3xl p-4 font-neue font-extrabold">
     <a href="/about">About</a>
   </li>
-  <li class="text-3xl p-4 uppercase font-extrabold">
+  <li class="text-3xl p-4 font-extrabold font-neue">
     <a href="/contact">Contact</a>
   </li>
 </ul>
@@ -44,4 +46,3 @@ import Logo from "./Logo.astro";
       }
     });
 </script>
-
