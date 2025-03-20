@@ -39,54 +39,41 @@ import IndexNav from "../components/IndexNav.astro";
           Victoria
         </div>
 
-        <div class="xl:relative xl:-mt-90 xl:grid xl:grid-cols-3">
+        <div
+          class="xl:relative xl:-mt-90 xl:grid xl:grid-cols-3
+        2xl:-mt-85">
           <div class="xl:col-start-2">
             <img
               src="/images/art.JPG"
               class="w-full p-5 -mt-5
         md:pl-40 md:pr-40 md:-mt-30
         xl:p-15 xl:mt-0
-        2xl:h-full 2xl:p-0"
+         2xl:p-0"
             />
+          </div>
+
+          <div
+            class="z-100 fixed left-1/2 transform -translate-x-1/2 bg-[url(/images/star2.png)]
+              bg-cover bg-center bg-no-repeat flex items-center justify-center
+              h-17 w-17 bottom-20
+              2xl:h-20 2xl:w-20 2xl:bottom-25">
+            <p
+              class="font-extrabold font-neue text-center whitespace-nowrap">
+              contact me
+            </p>
           </div>
 
           <div
             class="xl:sticky xl:-top-70 xl:z-10 xl:col-start-1 xl:row-start-1
             2xl:-top-85">
-            <IndexNav text="Cases" link="/cases" />
+            <IndexNav text="cases" link="/cases" />
           </div>
 
           <div
             class="xl:sticky xl:-top-70 xl:z-10 xl:col-start-3
           2xl:-top-85">
-            <IndexNav text="About" link="/about" />
+            <IndexNav text="about" link="/about" />
           </div>
-
-          <div class="hidden xl:inline">
-            <Case
-              img="https://media.giphy.com/media/11xBk5MoWjrYoE/giphy.gif?cid=ecf05e47ri7x46ts1f5ao99oaq72dkeo18weut8uw5neb0vi&ep=v1_gifs_search&rid=giphy.gif&ct=g"
-              title="SCHOOL"
-            />
-          </div>
-
-          <div class="hidden xl:inline xl:col-start-3">
-            <Case
-              img="https://media.giphy.com/media/11xBk5MoWjrYoE/giphy.gif?cid=ecf05e47ri7x46ts1f5ao99oaq72dkeo18weut8uw5neb0vi&ep=v1_gifs_search&rid=giphy.gif&ct=g"
-              title="ABOUT"
-            />
-          </div>
-
-          <img src="images/dogcrab.png" class="pic p-4 hidden xl:inline" />
-
-          <img src="images/dogcrab.png" class="p-4 hidden xl:inline" />
-
-          <img src="images/dogcrab.png" class="p-4 hidden xl:inline" />
-
-          <img src="images/dogcrab.png" class="p-4 hidden xl:inline" />
-
-          <img src="images/dogcrab.png" class="p-4 hidden xl:inline" />
-
-          <img src="images/dogcrab.png" class="p-4 hidden xl:inline" />
         </div>
       </div>
     </div>
